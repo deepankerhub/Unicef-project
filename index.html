@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="http://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <title>UNICEF Donation Campaign</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!--header Section-->
+    <div>
+        <header class="fullContainer" id="homeSection">
+            <div style="padding: 10px !important; background: #1cabe2 !important;">
+                <div class="unicef-logo" align="left">
+                    <a href="#"><img width="300" src="assests/dc978414-a0fe-4655-a280-02ddc124cab0.png" alt="India" title="India"></a>
+                 </div>
+            </div>
+        </header>
+    </div>
+    
+    <div class="banner">
+        <div class="banner-text">
+        <h1>Help Us Make a Difference in <span>Children's Lives</span></h1>
+        <p>Your donation can provide life-saving support to children in need.</p>
+        <a href="#donation-form"><button>Donate Now</button></a>
+        </div>
+    </div>
+    
+    <!--Donation Form-->
+
+    <div class="form-container" id="donation-form">
+        <h2>Make a Donation</h2>
+
+        <form action="/submit-donation" method="POST">
+
+            <!-- Donation Frequency -->
+            <label>Donation Frequency</label>
+            <div class="radio-group">
+                <label><input type="radio" name="frequency" value="one-time" required> One-Time</label>
+                <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+            </div>
+
+            <!-- Donation Amount for One-Time and Monthly -->
+            <div id="amount-selection">
+                <label>Select Donation Amount</label>
+
+                <!-- One-Time Donation Amount Options -->
+                <div id="one-time-options" class="amount-group">
+                    <button type="button" class="amount-button" data-value="5000">5000</button>
+                    <button type="button" class="amount-button" data-value="10000">10,000</button>
+                    <button type="button" class="amount-button" data-value="150000">15,0000</button>
+                    <button type="button" class="amount-button" data-value="other">Other</button>
+                </div>
+
+                <!-- Monthly Donation Amount Options -->
+                <div id="monthly-options" class="amount-group" style="display:none;">
+                    <button type="button" class="amount-button" data-value="800">800</button>
+                    <button type="button" class="amount-button" data-value="1000">1000</button>
+                    <button type="button" class="amount-button" data-value="1500">1500</button>
+                    <button type="button" class="amount-button" data-value="other">Other</button>
+                </div>
+
+                <!-- Custom Amount Input -->
+                <div class="custom-amount" id="custom-amount-input">
+                    <label for="custom-amount">Enter Custom Amount</label>
+                    <input type="number" id="custom-amount" name="custom_amount" placeholder="Enter custom amount">
+                </div>
+
+                <input type="hidden" id="donation-amount" name="amount" required>
+            </div>
+
+            <!-- Mode of Payment -->
+            <h3>Payment Method</h3>
+
+            <div class="radio-group">
+                <label><input type="radio" name="payment-method" value="upi" required> UPI</label>
+                <label><input type="radio" name="payment-method" value="bank-account"> Bank Account</label>
+            </div>
+
+            <!-- UPI Payment Details -->
+            <div id="upi-details" class="payment-details">
+                <label for="upi-id">UPI ID</label>
+                <input type="text" id="upi-id" name="upi_id" placeholder="Enter your UPI ID">
+            </div>
+
+            <!-- Bank Account Payment Details -->
+            <div id="bank-account-details" class="payment-details">
+                <label for="account-number">Bank Account Number</label>
+                <input type="text" id="account-number" name="account_number" placeholder="Enter your bank account number">
+
+                <label for="ifsc">IFSC Code</label>
+                <input type="text" id="ifsc" name="ifsc_code" placeholder="Enter the IFSC code">
+            </div>
+
+            <!-- Donor Information -->
+            <h3>Donor Information</h3>
+
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <!-- Submit Button -->
+            <button type="submit">Donate Now</button>
+
+        </form>
+    </div>
+
+    <!--About Us Section-->
+    <div class="about">
+        <h2>About Us</h2>
+        <p>UNICEF has been providing children, and their families, essential and urgent support towards more fulfilling lives</p>
+    </div>
+    <div class="about-container">
+        <section class="about-section">
+            <div class="about-vid">
+                <video controls autoplay loop src="assests/unicef-vid.mp4" width="550px"></video>
+            </div>
+            <div class="about-content">
+                <h2>Help us make a better world for childrens</h2>
+                <p>Our community of supporters, like yourself, has been an 
+                    integral part of this joyful journey of giving children the best start in life.<br>
+                    <br>For 75 years, we have been working relentlessly to safeguard their rights and growth. 
+                    We work closely with the Government of India and our partners to improve the lives of the 
+                    most vulnerable children with long-lasting interventions.</p>
+                    <a href="#donation-form"><button>Join Our Community</button></a>
+                </div>
+        </section>
+    </div>
+
+    <!--Achievements Section-->
+
+    <section class="ac-section">
+        <div class="ac-heading">
+            <h2>Some of Unicef's <span>Innovation and Achievents</span></h2>
+            </div>
+        <div class="image-row">
+            <img src="assests/d0484d4e-887c-4e8b-9530-0af2acca13a5.png" alt="Image 1">
+            <img src="assests/7bda185d-36bf-447b-9021-99838c4b11d6.png" alt="Image 2">
+            <img src="assests/11de6648-4854-48c4-b3dd-5c2cb16dec1b.png" alt="Image 3">
+            <img src="assests/0379245f-2367-4e11-b7e5-a63e21d83866.png" alt="Image 4">
+        </div>
+        <div class="ac-button">
+            <a href="#donation-form"><button>Act Now</button></a>
+            </div>
+    </section>
+
+    <!--Testimonials Section-->
+
+    <section class="tm-section">
+        <div class="head">
+            <h2>Donors share their experience of the <span>joy of giving!</span></h2>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonials">
+                        <img src="assests/right-quote.png" class="quote">
+                        <div class="tm-content">
+                            <p>"I am glad that I got an opportunity to contribute to UNICEF in whatever way I can. Future of our Nation is in the hands of today's children and it's our responsibility to make sure that our children learn grow and sustain whom will empower our nation. 
+                                I am sure that one day these children will make our nation proud. I humbly request everyone of you to do whatever contribution that you can so that our country can nurture future heroes. Jaihind"</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/5d060433-9a16-44ca-b79f-8a081b49f97b.png">
+                                </div>
+                                <h3>Vaisakh S<br><span>Creative head</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials">
+                        <img src="assests/right-quote.png" class="quote">
+                        <div class="tm-content">
+                            <p>"Children are vulnerable and therefore they need utmost care and above all protection! Let us eradicate exploitation and do whatever it takes to make the lives of our Children beautiful, just like they are! I am glad I donate to UNICEF and have two additional children besides my biological ones. 
+                                The money donated means nothing absolutely nothing to me, but the well-being of my foster kids means the world to me. I love you, my babies! May you always be protected and nurtured! Keep up the good work Unicef and may you continue to make a positive difference to our Children! I urge all to give whatever you can for it is in GIVING that we RECEIVE!"</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/3bcc98ca-4c60-440e-b0d7-2077e05f284c.png">
+                                </div>
+                                <h3>Sumita R<br><span>Human Resources</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials">
+                        <img src="assests/right-quote.png" class="quote">
+                        <div class="tm-content">
+                            <p>"Being a donor to UNICEF has been one of the most fulfilling experiences of my life. Knowing that my donations are helping to provide financial support to children in need gives me a sense of purpose and satisfaction that is hard to put into words. 
+                                Through UNICEF's child financial support program, my donations are making a real difference in the lives of children, helping to provide them with access to education, healthcare, clean water, and other basic necessities that are essential for their growth and development."</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/c60c24a2-c7df-47a0-96e9-578aa5985a68.png">
+                                </div>
+                                <h3>Kasiviswanathan<br><span>Developer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials">
+                        <img src="assests/right-quote.png" class="quote">
+                        <div class="tm-content">
+                            <p>"Being a donor is a rewarding and fulfilling experience for me. Whether its time, money, or resources, 
+                                the act of giving creates a sense of purpose and satisfaction. Knowing that I am making a small but positive impact on someone else's life is a powerful motivation and it gives me a feeling of personal fulfilment and happiness. 
+                                Thanks to UNICEF India for letting me be a part of it"</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/793790cc-30e6-45c3-b567-c8313ac1ae8c.png">
+                                </div>
+                                <h3>Mridula<br><span>IIT Madras</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials">
+                        <img src="assests/right-quote.png" class="quote">
+                        <div class="tm-content">
+                            <p>"Being a donor is a rewarding and fulfilling experience for me. Whether its time, money, or resources, 
+                                the act of giving creates a sense of purpose and satisfaction. Knowing that I am making a small but positive impact on someone else's life is a powerful motivation and it gives me a feeling of personal fulfilment and happiness. 
+                                Thanks to UNICEF India for letting me be a part of it"</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/793790cc-30e6-45c3-b567-c8313ac1ae8c.png">
+                                </div>
+                                <h3>Mridula<br><span>IIT Madras</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer Section-->
+    <a href="#donation-form" class="gotodonation">DONATE NOW</a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <div class="footer-widget">
+                    <a href="#">
+                        <img src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/0e69d04c-36f5-465a-b855-3f69c50f7c29.png"
+                            alt="India" class="logo"/>
+                    </a>
+                    <ul class="socials">
+                        <li><a href="https://www.instagram.com/unicef/"><i class='bx bxl-instagram'></i></a></li>
+                        <li><a href="https://www.facebook.com/unicef/"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="https://x.com/UNICEF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class='bx bxl-twitter' ></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h6>Contact</h6>
+                    <ul class="links">     
+                        <li>Banjara Hills, Hyderabad - 500034</li>
+                        <li><a href="tel:+91 040 23477200">+91 040 23477200</a></li>
+                        <li><a href="mailto:hyderabad@unicef.org">hyderabad@unicef.org</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h6>Quick Links</h6>
+                    <ul class="links">
+                        <li><a href="https://www.unicef.org/legal#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.unicef.org/legal">Terms and Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <div class="copyrightText">
+          <p>Copyright © 2024. All Rights Reserved.</p>
+      </div>
+    
+
+    <script src="script.js"></script>
+    <script src="http://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows : true
+        },
+        loop: true,
+    });
+    </script>
+    
+</body>
+</html>
