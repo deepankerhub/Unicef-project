@@ -291,6 +291,10 @@ button:hover {
     padding-top: 80px;
     padding-bottom: 50px;
 }
+.swiper-wrapper {
+    box-sizing: border-box;
+  }
+  
 .swiper-slide {
     background-position: center;
     background-size: cover;
